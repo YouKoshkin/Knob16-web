@@ -267,8 +267,12 @@ function App() {
             in your pocket
           </h1>
           <p className="hero-kicker">10 seconds to MIDI</p>
-          <p className="hero-copy">64 knobs. 14-bit CC. MPE. Ableton Blue Hand.</p>
-          <p className="hero-copy">Your iPhone. Always on your desk. Always in your pocket.</p>
+          <p className="hero-copy">
+            64 knobs&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;14-bit CC&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;MPE&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Ableton Blue Hand
+          </p>
+          <p className="hero-copy">
+            Your iPhone&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Always on your desk&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Always in your pocket
+          </p>
           <div className="hero-actions">
             <a className="button" href="#pricing">
               Get Knob16 — €19.99
@@ -308,7 +312,10 @@ function App() {
         </section>
 
         <section className="section section-divider" id="numbers">
-          <SectionHeader title="The numbers" subcopy="Direct MIDI. No middleware." />
+          <SectionHeader
+            title="The numbers"
+            subcopy="Direct MIDI&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;No middleware"
+          />
           <div className="stats-grid">
             {stats.map((stat) => (
               <article className={`stat-card tone-${stat.tone}`} key={stat.label}>
@@ -381,7 +388,7 @@ function App() {
           <SectionHeader
             eyebrow="SEE IT IN ACTION"
             title="Product demos"
-            subcopy="Short loops. No narration. Just the app doing its thing."
+            subcopy="Short loops&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;No narration&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Just the app doing its thing"
           />
           <div className="demo-grid">
             {demos.map((item) => (
@@ -429,12 +436,14 @@ function App() {
           </div>
           <p className="pricing-kicker">For the price of a patch cable</p>
           <p className="pricing-copy">
-            No subscription. No tiers. One price — yours forever.
+            No subscription&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;No tiers&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Yours forever
           </p>
           <a className="button" href="#footer">
             Get Knob16
           </a>
-          <small className="trust-copy">30-day money-back guarantee · No account required</small>
+          <small className="trust-copy">
+            30-day money-back guarantee&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;No account required
+          </small>
         </section>
 
         <section className="section section-divider section-cta">
