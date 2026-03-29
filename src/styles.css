@@ -209,11 +209,12 @@ select {
   align-items: center;
   justify-content: center;
   min-height: 52px;
-  padding: 0 24px;
+  padding: 14px 24px;
   border-radius: 999px;
   background: var(--green);
   color: #0a0a0a;
   font-weight: 700;
+  line-height: 1;
   box-shadow: 0 10px 30px rgba(74, 222, 128, 0.24);
 }
 
@@ -575,12 +576,13 @@ select {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-end;
   gap: 16px;
   margin-top: 24px;
   font-family: 'IBM Plex Mono', monospace;
   font-size: clamp(3.3rem, 9vw, 5.4rem);
   font-weight: 700;
-  line-height: 0.9;
+  line-height: 0.98;
 }
 
 .price-amount {
@@ -602,7 +604,6 @@ select {
   color: var(--green);
 }
 
-.pricing-list,
 .cta-meta {
   display: flex;
   flex-wrap: wrap;
@@ -622,40 +623,28 @@ select {
 
 .section-pricing .pricing-kicker {
   margin-top: 0;
-  line-height: 1;
+  line-height: 1.18;
 }
 
 .section-pricing .pricing-copy {
   margin-top: 0;
-  line-height: 1.45;
+  line-height: 1.55;
 }
 
-.section-pricing .pricing-list {
-  display: grid;
-  gap: 12px;
-  margin-top: 6px;
-  margin-bottom: 18px;
+.section-pricing .button {
+  min-height: 0;
+  padding: 16px 24px;
+  line-height: 1;
+  transform: translateY(8px);
 }
 
-.pricing-list-item {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
-  color: var(--muted);
-  font-size: 0.96rem;
-  line-height: 1.25;
-}
-
-.pricing-check {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 18px;
-  min-width: 18px;
-  color: var(--green);
+.pricing-header {
+  margin: 8px 0 4px;
+  color: var(--text);
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 1rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.1;
 }
 
 .section-cta .cta-copy {
@@ -672,7 +661,6 @@ select {
   padding-right: 0;
 }
 
-.pricing-list > span,
 .cta-meta span {
   padding: 10px 14px;
   border: 1px solid var(--line);
@@ -680,14 +668,6 @@ select {
   color: var(--muted);
   background: rgba(255, 255, 255, 0.02);
   font-size: 0.82rem;
-}
-
-.pricing-list-item span {
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  font-size: 0.96rem;
 }
 
 .trust-copy {

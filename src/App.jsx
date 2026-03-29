@@ -264,9 +264,9 @@ function App() {
             <br />
             MIDI Surface Control
             <br />
-            in your pocket.
+            in your pocket
           </h1>
-          <p className="hero-kicker">10 seconds to MIDI.</p>
+          <p className="hero-kicker">10 seconds to MIDI</p>
           <p className="hero-copy">64 knobs. 14-bit CC. MPE. Ableton Blue Hand.</p>
           <p className="hero-copy">Your iPhone. Always on your desk. Always in your pocket.</p>
           <div className="hero-actions">
@@ -283,7 +283,7 @@ function App() {
         </section>
 
         <section className="section section-divider" id="setup">
-          <SectionHeader title="10 seconds to MIDI." />
+          <SectionHeader title="10 seconds to MIDI" />
           <div className="comparison-table">
             <div className="comparison-column">
               <div className="comparison-head">The gear you love</div>
@@ -308,7 +308,7 @@ function App() {
         </section>
 
         <section className="section section-divider" id="numbers">
-          <SectionHeader title="The numbers." subcopy="Direct MIDI. No middleware." />
+          <SectionHeader title="The numbers" subcopy="Direct MIDI. No middleware." />
           <div className="stats-grid">
             {stats.map((stat) => (
               <article className={`stat-card tone-${stat.tone}`} key={stat.label}>
@@ -345,7 +345,7 @@ function App() {
         </section>
 
         <section className="section section-divider" id="features">
-          <SectionHeader eyebrow="WHO IT'S FOR" title="Built for how you work." />
+          <SectionHeader eyebrow="WHO IT'S FOR" title="Built for how you work" />
           <div className="card-grid">
             {valueProps.map((item) => (
               <article className={`feature-card tone-${item.tone}`} key={item.title}>
@@ -357,7 +357,7 @@ function App() {
         </section>
 
         <section className="section section-divider" id="deep-dive">
-          <SectionHeader eyebrow="DEEP DIVE" title="Every detail, considered." />
+          <SectionHeader eyebrow="DEEP DIVE" title="Every detail, considered" />
           <div className="deep-dive-stack">
             {deepDive.map((item) => (
               <article
@@ -380,7 +380,7 @@ function App() {
         <section className="section section-alt" id="demo">
           <SectionHeader
             eyebrow="SEE IT IN ACTION"
-            title="Product demos."
+            title="Product demos"
             subcopy="Short loops. No narration. Just the app doing its thing."
           />
           <div className="demo-grid">
@@ -398,7 +398,7 @@ function App() {
         </section>
 
         <section className="section section-divider" id="use-cases">
-          <SectionHeader eyebrow="USE CASES" title="When Knob16 makes sense." />
+          <SectionHeader eyebrow="USE CASES" title="When Knob16 makes sense" />
           <div className="use-case-stack">
             <div className="use-case-grid use-case-grid-top">
               {useCases.slice(0, 3).map((item) => (
@@ -425,54 +425,30 @@ function App() {
             <span className="price-amount">
               €19<span className="price-dot">.</span><span className="price-decimals">99</span>
             </span>
-            <span className="price-accent">Once.</span>
+            <span className="price-accent">Once</span>
           </div>
-          <p className="pricing-kicker">For a price of a patch cable.</p>
+          <p className="pricing-kicker">For the price of a patch cable</p>
           <p className="pricing-copy">
             No subscription. No tiers. One price — yours forever.
           </p>
-          <div className="pricing-list">
-            <div className="pricing-list-item">
-              <span className="pricing-check">✓</span>
-              <span>Every feature included</span>
-            </div>
-            <div className="pricing-list-item">
-              <span className="pricing-check">✓</span>
-              <span>iCloud sync across all your devices</span>
-            </div>
-            <div className="pricing-list-item">
-              <span className="pricing-check">✓</span>
-              <span>Free updates forever</span>
-            </div>
-          </div>
           <a className="button" href="#footer">
-            Buy Knob16 Now
+            Get Knob16
           </a>
           <small className="trust-copy">30-day money-back guarantee · No account required</small>
         </section>
 
         <section className="section section-divider section-cta">
           <h2>
-            Start making music in
-            <br />
-            10 seconds.
+            Already on your desk
           </h2>
           <div className="hero-actions">
             <a className="button" href="#pricing">
-              Get Knob16 — €19.99 once
+              Buy
             </a>
             <a className="text-link" href="#demo">
-              See the 90-sec Ableton demo →
+              See demo →
             </a>
           </div>
-          <div className="cta-meta">
-            <span>Instant setup</span>
-            <span>One-time payment</span>
-            <span>30-day refund</span>
-          </div>
-          <p className="cta-copy">
-            Try it risk-free. If it doesn&apos;t fit your workflow, get a full refund.
-          </p>
         </section>
 
         <section className="section section-divider faq-section" id="faq">
