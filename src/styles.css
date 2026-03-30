@@ -109,6 +109,10 @@ select {
   padding: 88px 0;
 }
 
+.section-setup {
+  padding-top: 0;
+}
+
 .section-divider {
   border-top: 1px solid var(--line);
 }

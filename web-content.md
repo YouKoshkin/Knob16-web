@@ -15,7 +15,7 @@ KNOB16
 Physical control  
 over your DAW
 
-10 seconds to connect
+10 seconds to MIDI
 
 Already in your pocket
 

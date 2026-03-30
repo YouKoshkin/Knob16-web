@@ -258,7 +258,7 @@ function App() {
             <br />
             over your DAW
           </h1>
-          <p className="hero-kicker">10 seconds to connect</p>
+          <p className="hero-kicker">10 seconds to MIDI</p>
           <p className="hero-kicker">Already in your pocket</p>
           <p className="hero-copy">
             Works with Ableton Live&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Logic Pro&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;FL Studio&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Traktor&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;and everything else
@@ -276,7 +276,7 @@ function App() {
           </div>
         </section>
 
-        <section className="section section-divider" id="setup">
+        <section className="section section-setup" id="setup">
           <SectionHeader title="10 seconds to MIDI" />
           <div className="comparison-table">
             <div className="comparison-group">
