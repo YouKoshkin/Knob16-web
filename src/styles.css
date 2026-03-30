@@ -201,12 +201,17 @@ select {
   font-weight: 600;
 }
 
+.hero .hero-kicker + .hero-kicker {
+  margin-top: -10px;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 16px 24px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .button {
