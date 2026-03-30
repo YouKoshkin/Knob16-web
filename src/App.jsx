@@ -283,24 +283,28 @@ function App() {
         <section className="section section-divider" id="setup">
           <SectionHeader title="10 seconds to MIDI" />
           <div className="comparison-table">
-            <div className="comparison-column">
-              <div className="comparison-head">The gear you love</div>
-              {frictionLeftRows.map((left) => (
-                <div className="comparison-row" key={left}>
-                  {left}
-                </div>
-              ))}
+            <div className="comparison-group">
+              <div className="comparison-title">The gear you love</div>
+              <div className="comparison-column">
+                {frictionLeftRows.map((left) => (
+                  <div className="comparison-row" key={left}>
+                    {left}
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="comparison-column comparison-column-accent">
-              <div className="comparison-head">Knob16</div>
-              {frictionRightRows.map((row) => (
-                <div
-                  className={`comparison-row${row.tone === 'success' ? ' comparison-row-success' : ''}`}
-                  key={row.text}
-                >
-                  {row.text}
-                </div>
-              ))}
+            <div className="comparison-group">
+              <div className="comparison-title comparison-title-accent">Knob16</div>
+              <div className="comparison-column comparison-column-accent">
+                {frictionRightRows.map((row) => (
+                  <div
+                    className={`comparison-row${row.tone === 'success' ? ' comparison-row-success' : ''}`}
+                    key={row.text}
+                  >
+                    {row.text}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
