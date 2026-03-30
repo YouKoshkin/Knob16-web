@@ -254,18 +254,14 @@ function App() {
             KNOB16
           </div>
           <h1>
-            Professional
+            Physical control
             <br />
-            MIDI Surface Control
-            <br />
-            in your pocket
+            over your DAW
           </h1>
-          <p className="hero-kicker">10 seconds to MIDI</p>
+          <p className="hero-kicker">10 seconds to connect</p>
+          <p className="hero-kicker">Already in your pocket</p>
           <p className="hero-copy">
-            64 knobs&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;14-bit CC&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;MPE&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Ableton Blue Hand
-          </p>
-          <p className="hero-copy">
-            Your iPhone&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Always on your desk&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Always in your pocket
+            Works with Ableton Live&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Logic Pro&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;FL Studio&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Traktor&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;and everything else
           </p>
           <div className="hero-actions">
             <a className="button" href="#pricing">

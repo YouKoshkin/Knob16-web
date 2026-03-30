@@ -12,15 +12,14 @@
 
 KNOB16
 
-Professional  
-MIDI Surface Control  
-in your pocket
+Physical control  
+over your DAW
 
-10 seconds to MIDI
+10 seconds to connect
 
-64 knobs   ·   14-bit CC   ·   MPE   ·   Ableton Blue Hand
+Already in your pocket
 
-Your iPhone   ·   Always on your desk   ·   Always in your pocket
+Works with Ableton Live   ·   Logic Pro   ·   FL Studio   ·   Traktor   ·   and everything else
 
 - Get Knob16 — 19.99
 - See it in action →
@@ -46,47 +45,35 @@ Your iPhone   ·   Always on your desk   ·   Always in your pocket
 - Unlock
 - Done ✓
 
-## Built for How You Work
+## Serious Tools
 
-WHO IT'S FOR
+SERIOUS TOOLS
 
-Built for how you work
+Runs deeper than it looks
 
-### For the producer who already owns hardware
+### Fine-Tune Mode
 
-- No new desk space required
-- Complements existing gear
-- Zero cable clutter
+Double-tap any knob and it slows down. Same gesture, fraction of the movement. For the moments when a single step is too much.
 
-### For the Ableton user
+### Bidirectional MIDI
 
-- Blue Hand integration
-- Auto-map to selected device
-- Instant parameter control
+Knobs follow your DAW, not just the other way around. Move a parameter in Ableton, the knob moves with it. Always in sync, never out of position.
 
-### For the performer
+### Per-Knob Configuration
 
-- Snapshots for instant recall
-- VCA grouping for mix control
-- Notes Mode for triggers
+Every knob has its own CC number, MIDI channel, label, and range. 64 knobs, 64 independent setups. Nothing is global unless you want it to be.
 
-### For the MPE player
+### Output Curves
 
-- Full MPE expression
-- Per-note pitch bend
-- Pressure and slide control
+Linear, Exponential, or Logarithmic scaling per follower. The same physical movement, completely different response. Dial in exactly how the control feels.
 
-### Your first MIDI controller
+### Notes Mode
 
-- No hardware to buy
-- Learn MIDI on your phone
-- Works with any DAW
+16 pads per bank with 29 scales and per-octave transpose. Drag for velocity, pitch bend, or full MPE expression. A playable instrument, not just a controller.
 
-### Built for the studio
+### Auto-Save
 
-- Always-on display
-- Persistent presets
-- Low-latency connectivity
+Everything saves automatically, every time. Close the app, switch presets, put the phone in your pocket — nothing is lost. Touch it again exactly where you left it.
 
 ## Deep Dive
 
