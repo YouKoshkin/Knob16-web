@@ -135,6 +135,11 @@ select {
   line-height: 1.1;
 }
 
+.section-cta h2 {
+  font-size: clamp(2rem, 3.2vw, 2.5rem);
+  white-space: normal;
+}
+
 .section-header p,
 .hero-copy,
 .pricing-copy,
@@ -243,6 +248,10 @@ select {
     linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
     rgba(17, 17, 19, 0.72);
   box-shadow: var(--shadow);
+}
+
+.hero .hero-copy + .hero-copy {
+  margin-top: -20px;
 }
 
 .hero-visual img,
@@ -650,6 +659,11 @@ select {
 .section-cta .cta-copy {
   max-width: 640px;
   margin-top: 0;
+  color: var(--green);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: clamp(1.35rem, 3vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.05;
 }
 
 #proof,
@@ -882,6 +896,7 @@ select {
     width: calc(100vw - 24px);
     padding: 72px 0;
   }
+
 
   .section-pricing {
     gap: 16px;

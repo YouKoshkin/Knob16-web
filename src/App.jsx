@@ -1,11 +1,5 @@
 import React, { useState } from 'react';
 
-const stats = [
-  { label: 'USB', value: '~2ms', tone: 'green' },
-  { label: 'Bluetooth', value: '~8ms', tone: 'blue' },
-  { label: 'Wi-Fi', value: '~10ms', tone: 'amber' },
-];
-
 const frictionLeftRows = [
   'Find the bag',
   'Unpack',
@@ -25,16 +19,16 @@ const frictionRightRows = [
 
 const testimonials = [
   {
-    quote: 'Replaced my Faderfox EC4. Same desk, fewer cables.',
+    quote: 'Four sends mapped to a group. One knob controls the wet mix, everything moves together.',
     author: 'Alex M., Producer',
   },
   {
-    quote: '14-bit CC on an iPhone. The smoothness is unreal.',
-    author: 'Sam K., Sound Designer',
+    quote: 'Finished a track on a flight. Had my laptop, had my phone. That was enough.',
+    author: 'Sam K., Touring Musician',
   },
   {
-    quote: 'Blue Hand support alone is worth the download.',
-    author: 'Jordan L., Ableton User',
+    quote: 'Still use my hardware for the big stuff. Knob16 handles everything else.',
+    author: 'Jordan L., Producer',
   },
 ];
 
@@ -275,10 +269,10 @@ function App() {
           </p>
           <div className="hero-actions">
             <a className="button" href="#pricing">
-              Get Knob16 — €19.99
+              Get Knob16 — 19.99
             </a>
             <a className="text-link" href="#demo">
-              See it in Ableton →
+              See it in action →
             </a>
           </div>
           <div className="hero-visual">
@@ -307,46 +301,6 @@ function App() {
                   {row.text}
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section section-divider" id="numbers">
-          <SectionHeader
-            title="The numbers"
-            subcopy="Direct MIDI&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;No middleware"
-          />
-          <div className="stats-grid">
-            {stats.map((stat) => (
-              <article className={`stat-card tone-${stat.tone}`} key={stat.label}>
-                <span>{stat.label}</span>
-                <strong>{stat.value}</strong>
-                <small>latency</small>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="section section-divider" id="proof">
-          <div className="testimonials-grid">
-            {testimonials.map((item, index) => (
-              <article className={`quote-card tone-${['green', 'blue', 'cyan'][index]}`} key={item.author}>
-                <p>&ldquo;{item.quote}&rdquo;</p>
-                <span>{item.author}</span>
-              </article>
-            ))}
-          </div>
-          <div className="proof-meta">
-            <div className="rating-row">
-              <span className="rating-stars">★★★★★</span>
-              <span className="rating-text">4.9 on the App Store</span>
-            </div>
-            <div className="logo-row">
-              <span>Ableton Live</span>
-              <span>Logic Pro</span>
-              <span>FL Studio</span>
-              <span>Bitwig</span>
-              <span>MainStage</span>
             </div>
           </div>
         </section>
@@ -381,6 +335,32 @@ function App() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="section section-divider" id="proof">
+          <div className="testimonials-grid">
+            {testimonials.map((item, index) => (
+              <article className={`quote-card tone-${['green', 'blue', 'cyan'][index]}`} key={item.author}>
+                <p>&ldquo;{item.quote}&rdquo;</p>
+                <span>{item.author}</span>
+              </article>
+            ))}
+          </div>
+          <div className="proof-meta">
+            <div className="rating-row">
+              <span className="rating-stars">★★★★★</span>
+              <span className="rating-text">4.9 on the App Store</span>
+            </div>
+            <div className="logo-row">
+              <span>Ableton Live</span>
+              <span>Logic Pro</span>
+              <span>FL Studio</span>
+              <span>Traktor Pro</span>
+              <span>Serato DJ</span>
+              <span>Rekordbox</span>
+            </div>
+            <div className="rating-text">If it speaks MIDI, it works</div>
           </div>
         </section>
 
@@ -430,7 +410,7 @@ function App() {
           <div className="price-badge">LIFETIME LICENSE</div>
           <div className="price-lockup">
             <span className="price-amount">
-              €19<span className="price-dot">.</span><span className="price-decimals">99</span>
+              19<span className="price-dot">.</span><span className="price-decimals">99</span>
             </span>
             <span className="price-accent">Once</span>
           </div>
@@ -448,11 +428,14 @@ function App() {
 
         <section className="section section-divider section-cta">
           <h2>
-            Already on your desk
+            Your iPhone is already
+            <br />
+            a MIDI controller
           </h2>
+          <p className="cta-copy">This just turns it on</p>
           <div className="hero-actions">
             <a className="button" href="#pricing">
-              Buy
+              Turn it on
             </a>
             <a className="text-link" href="#demo">
               See demo →
