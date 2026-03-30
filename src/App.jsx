@@ -35,33 +35,33 @@ const testimonials = [
 const valueProps = [
   {
     tone: 'green',
-    title: 'For the producer who already owns hardware',
-    body: '• No new desk space required\n• Complements existing gear\n• Zero cable clutter',
+    title: 'Fine-Tune Mode',
+    body: 'Double-tap any knob and it slows down. Same gesture, fraction of the movement. For the moments when a single step is too much.',
   },
   {
     tone: 'blue',
-    title: 'For the Ableton user',
-    body: '• Blue Hand integration\n• Auto-map to selected device\n• Instant parameter control',
+    title: 'Bidirectional MIDI',
+    body: 'Knobs follow your DAW, not just the other way around. Move a parameter in Ableton, the knob moves with it. Always in sync, never out of position.',
   },
   {
     tone: 'amber',
-    title: 'For the performer',
-    body: '• Snapshots for instant recall\n• VCA grouping for mix control\n• Notes Mode for triggers',
+    title: 'Per-Knob Configuration',
+    body: 'Every knob has its own CC number, MIDI channel, label, and range. 64 knobs, 64 independent setups. Nothing is global unless you want it to be.',
   },
   {
     tone: 'pink',
-    title: 'For the MPE player',
-    body: '• Full MPE expression\n• Per-note pitch bend\n• Pressure and slide control',
+    title: 'Output Curves',
+    body: 'Linear, Exponential, or Logarithmic scaling per follower. The same physical movement, completely different response. Dial in exactly how the control feels.',
   },
   {
     tone: 'red',
-    title: 'Your first MIDI controller',
-    body: '• No hardware to buy\n• Learn MIDI on your phone\n• Works with any DAW',
+    title: 'Notes Mode',
+    body: '16 pads per bank with 29 scales and per-octave transpose. Drag for velocity, pitch bend, or full MPE expression. A playable instrument, not just a controller.',
   },
   {
     tone: 'cyan',
-    title: 'Built for the studio',
-    body: '• Always-on display\n• Persistent presets\n• Low-latency connectivity',
+    title: 'Auto-Save',
+    body: 'Everything saves automatically, every time. Close the app, switch presets, put the phone in your pocket — nothing is lost. Touch it again exactly where you left it.',
   },
 ];
 
@@ -310,12 +310,12 @@ function App() {
         </section>
 
         <section className="section section-divider" id="features">
-          <SectionHeader eyebrow="WHO IT'S FOR" title="Built for how you work" />
+          <SectionHeader eyebrow="SERIOUS TOOLS" title="Runs deeper than it looks" />
           <div className="card-grid">
             {valueProps.map((item) => (
               <article className={`feature-card tone-${item.tone}`} key={item.title}>
                 <h3>{item.title}</h3>
-                <p className="multiline-copy">{item.body}</p>
+                <p>{item.body}</p>
               </article>
             ))}
           </div>
