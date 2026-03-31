@@ -4,30 +4,36 @@ const sections = [
   {
     title: '1. Acceptance of Terms',
     paragraphs: [
-      'By downloading, installing, or using MSC ("the App"), you agree to be bound by these Terms & Conditions. If you do not agree to these terms, do not use the App.',
-      'These terms apply to all users of the App, including users of the free tier and subscribers to the Pro plan.',
+      'By downloading, installing, or using Knob16 ("the App"), you agree to be bound by these Terms & Conditions. If you do not agree to these terms, do not use the App.',
+      'These terms apply to all users of the App.',
     ],
   },
   {
     title: '2. Description of the App',
     paragraphs: [
-      'MSC is a professional MIDI controller application for iOS and iPadOS. It provides:',
+      'Knob16 is a professional MIDI controller application for iOS and iPadOS.',
       'The App communicates directly with MIDI-compliant hardware and software on your device and local network. It does not connect to any proprietary backend or external server.',
-    ],
-    bullets: [
-      'Up to 64 configurable knobs (16 per bank × 4 banks) for sending MIDI Control Change (CC) messages',
-      'Support for 7-bit and 14-bit MIDI resolution',
-      'MIDI connectivity via USB, Bluetooth MIDI, and Network MIDI (Wi-Fi)',
-      'Bidirectional MIDI: send and receive CC, with live knob sync',
-      'Note Mode with MPE (MIDI Polyphonic Expression) support',
-      'VCA-style knob grouping with configurable output curves',
-      'MIDI Learn for automatic CC + channel detection',
-      'Snapshots and Preset management with import/export (`.k16preset` files)',
-      'Ableton Live Blue Hand integration via SysEx',
     ],
   },
   {
-    title: '3. License Grant',
+    title: '3. Purchase',
+    paragraphs: [
+      'Knob16 is a paid application available as a one-time purchase. The price is displayed in the App Store at the time of purchase in your local currency.',
+    ],
+    bullets: [
+      'Payment is charged to your Apple ID account at confirmation of purchase',
+      'The license is valid indefinitely — there are no recurring charges or subscriptions',
+      'All purchases are processed by Apple. For billing disputes or refund requests, contact Apple Support or visit reportaproblem.apple.com',
+    ],
+  },
+  {
+    title: '4. Age and Device Requirements',
+    paragraphs: [
+      'The App is rated 4+ and may be used by anyone. The App requires iOS 18.6 or later on a compatible iPhone or iPad. We are not responsible for issues arising from use on unsupported devices or operating system versions.',
+    ],
+  },
+  {
+    title: '5. License Grant',
     paragraphs: [
       'Subject to your compliance with these Terms, Yuri Koshkin grants you a limited, non-exclusive, non-transferable, revocable license to download and use the App on Apple devices you own or control, solely for your personal or professional use.',
       'You may not:',
@@ -38,62 +44,6 @@ const sections = [
       'Rent, lease, sublicense, or sell access to the App',
       'Use the App to develop a competing product or service',
       'Remove or alter any proprietary notices in the App',
-    ],
-  },
-  {
-    title: '4. Subscriptions and In-App Purchases',
-    subSections: [
-      {
-        title: '4.1 Free Tier',
-        paragraphs: ['The free tier provides access to core MIDI functionality with a limited number of saved presets.'],
-      },
-      {
-        title: '4.2 Pro Subscription',
-        paragraphs: [
-          'A Pro subscription unlocks:',
-          "Pro is available as a monthly or yearly auto-renewing subscription. Pricing is displayed in the App at the time of purchase and is set in your local currency via Apple's App Store.",
-        ],
-        bullets: [
-          'Unlimited Presets — no limit on saved configurations',
-          'Advanced Controls — all 128 MIDI CC controls per bank',
-          'iCloud Sync — optional preset synchronization across devices via iCloud',
-          'Future Pro Features — access to features added exclusively for Pro subscribers',
-        ],
-      },
-      {
-        title: '4.3 Free Trial',
-        paragraphs: [
-          'A free trial may be offered for new subscribers. The trial period and terms are displayed before confirmation. After the trial ends, your subscription automatically renews at the standard rate unless cancelled at least 24 hours before the renewal date.',
-        ],
-      },
-      {
-        title: '4.4 Billing and Cancellation',
-        bullets: [
-          'Payment is charged to your Apple ID account at confirmation of purchase',
-          'Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period',
-          "Manage or cancel subscriptions at any time in your device's App Store Settings → Subscriptions",
-          "No refunds are provided for partial subscription periods, except as required by applicable law or Apple's policies",
-          'All purchases are processed by Apple. For billing disputes, contact Apple Support',
-        ],
-      },
-      {
-        title: '4.5 Price Changes',
-        paragraphs: [
-          'Subscription prices may change. You will be notified in advance of any price change via the App Store. Continued use of the Pro subscription after a price change constitutes acceptance of the new price.',
-        ],
-      },
-    ],
-  },
-  {
-    title: '5. iCloud Sync (Pro Feature)',
-    paragraphs: [
-      'iCloud Sync is an optional Pro feature that stores your presets in your personal iCloud account (iCloud Drive). To use it:',
-      "We do not have access to your iCloud data. All sync is managed directly between your device and Apple's iCloud infrastructure. We are not responsible for data loss caused by iCloud service interruptions or account issues.",
-    ],
-    bullets: [
-      'You must be signed into iCloud on your device',
-      'Your iCloud storage must have available space',
-      "iCloud Sync is subject to Apple's iCloud Terms and Conditions",
     ],
   },
   {
@@ -119,7 +69,7 @@ const sections = [
   {
     title: '7. User Data and Privacy',
     paragraphs: [
-      'The App collects no personal information. All settings and presets are stored locally on your device or, if you enable iCloud Sync (Pro), in your personal iCloud account. We do not use analytics, crash reporting, advertising frameworks, or any third-party tracking tools.',
+      'The App collects no personal information. All settings and presets are stored locally on your device. We do not use analytics, crash reporting, advertising frameworks, or any third-party tracking tools.',
       'For full details, see the Privacy Policy accessible within the App.',
     ],
   },
@@ -133,7 +83,7 @@ const sections = [
     title: '9. Intellectual Property',
     paragraphs: [
       'The App, including its interface, code, graphics, and branding, is the intellectual property of Yuri Koshkin. All rights not expressly granted herein are reserved.',
-      'MIDI is a standard specification owned by the MIDI Manufacturers Association. Use of MIDI within this App is for interoperability purposes only.',
+      '"MIDI" is a standard specification owned by the MIDI Manufacturers Association. Use of MIDI within this App is for interoperability purposes only.',
     ],
   },
   {
@@ -153,13 +103,11 @@ const sections = [
     title: '11. Limitation of Liability',
     paragraphs: [
       'To the maximum extent permitted by applicable law, Yuri Koshkin shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to:',
-      'Our total liability to you for any claim arising from these Terms or the App shall not exceed the amount you paid for your current subscription period.',
     ],
     bullets: [
       'Loss of data or presets',
       'Damage to connected hardware or software caused by MIDI messages',
       'Loss of income or business interruption',
-      'Any damages arising from iCloud service failures',
     ],
   },
   {
@@ -176,18 +124,13 @@ const sections = [
   {
     title: '13. Termination',
     paragraphs: [
-      'Your license to use the App terminates automatically if you:',
-      'Upon termination, you must cease all use of the App. Termination does not entitle you to a refund except as required by applicable law.',
-    ],
-    bullets: [
-      'Violate any provision of these Terms',
-      'Fail to pay for a Pro subscription after the trial or grace period ends',
+      'Your license to use the App terminates automatically if you violate any provision of these Terms. Upon termination, you must cease all use of the App.',
     ],
   },
   {
     title: '14. Governing Law',
     paragraphs: [
-      "These Terms are governed by and construed in accordance with applicable law. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts in the developer's jurisdiction, unless otherwise required by consumer protection law in your region.",
+      'These Terms are governed by and construed in accordance with the laws of the Republic of Latvia. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of Latvia, unless otherwise required by consumer protection law in your region.',
       'Nothing in these Terms limits rights you may have under applicable consumer protection laws in your country of residence.',
     ],
   },
@@ -200,9 +143,6 @@ const sections = [
   {
     title: '16. Contact',
     paragraphs: ['For questions about these Terms, support requests, or feedback:'],
-    bullets: [
-      'Support: Available via the App Store product page',
-    ],
   },
 ];
 
@@ -248,12 +188,18 @@ export default function TermsPage() {
         </a>
         <h1>Terms &amp; Conditions</h1>
         <div className="terms-meta">
-          <div><strong>MSC — MIDI System Controller</strong></div>
+          <div><strong>Knob16 — 64-Knob MIDI Controller</strong></div>
           <div><strong>Last Updated:</strong> March 31, 2026</div>
         </div>
         {sections.map((section) => (
           <Section key={section.title} section={section} />
         ))}
+        <section className="terms-section">
+          <p>
+            <strong>Support:</strong>{' '}
+            <a href="mailto:support@knob16.com">support@knob16.com</a>
+          </p>
+        </section>
         <p className="terms-note">
           These Terms &amp; Conditions were last updated on March 31, 2026.
         </p>
