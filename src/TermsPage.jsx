@@ -201,7 +201,6 @@ const sections = [
     title: '16. Contact',
     paragraphs: ['For questions about these Terms, support requests, or feedback:'],
     bullets: [
-      'Developer: Yuri Koshkin',
       'Support: Available via the App Store product page',
     ],
   },
@@ -251,8 +250,6 @@ export default function TermsPage() {
         <div className="terms-meta">
           <div><strong>MSC — MIDI System Controller</strong></div>
           <div><strong>Last Updated:</strong> March 31, 2026</div>
-          <div><strong>Developer:</strong> Yuri Koshkin</div>
-          <div><strong>Bundle ID:</strong> com.koshkin.midicontrol.knob16</div>
         </div>
         {sections.map((section) => (
           <Section key={section.title} section={section} />

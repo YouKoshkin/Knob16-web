@@ -475,9 +475,9 @@ function App() {
           </div>
         </div>
         <div className="footer-links">
-          <a href="#faq">Privacy</a>
+          <a href="/privacy">Privacy</a>
           <a href="/terms">Terms</a>
-          <a href="#faq">Contact</a>
+          <a href="/support">Contact</a>
           <a href="#demo">Press Kit</a>
         </div>
       </footer>
