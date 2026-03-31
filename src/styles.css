@@ -103,6 +103,76 @@ select {
   color: var(--text);
 }
 
+.terms-page {
+  min-height: 100vh;
+  background: #fff;
+  color: #111;
+}
+
+.terms-wrap {
+  width: min(860px, calc(100vw - 40px));
+  margin: 0 auto;
+  padding: 48px 0 80px;
+}
+
+.terms-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #444;
+}
+
+.terms-page h1,
+.terms-page h2,
+.terms-page h3 {
+  color: #111;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.terms-page h1 {
+  margin: 0 0 24px;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+.terms-page h2 {
+  margin: 40px 0 16px;
+  font-size: 1.25rem;
+}
+
+.terms-page h3 {
+  margin: 24px 0 12px;
+  font-size: 1rem;
+}
+
+.terms-meta,
+.terms-page p,
+.terms-page li,
+.terms-note {
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.terms-meta {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 24px;
+}
+
+.terms-page ul {
+  margin: 12px 0 0 20px;
+  padding: 0;
+}
+
+.terms-subsection + .terms-subsection {
+  margin-top: 12px;
+}
+
+.terms-note {
+  margin-top: 40px;
+  color: #555;
+  font-style: italic;
+}
+
 .section {
   width: var(--container);
   margin: 0 auto;

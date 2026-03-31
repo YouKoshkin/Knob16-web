@@ -476,7 +476,7 @@ function App() {
         </div>
         <div className="footer-links">
           <a href="#faq">Privacy</a>
-          <a href="#faq">Terms</a>
+          <a href="/terms">Terms</a>
           <a href="#faq">Contact</a>
           <a href="#demo">Press Kit</a>
         </div>
