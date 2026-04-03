@@ -227,6 +227,19 @@ function SectionHeader({ eyebrow, title, subcopy }) {
   );
 }
 
+const heroImages = [
+  '/assets/hero-new-1.jpg',
+  '/assets/hero-new-2.jpg',
+  '/assets/hero-new-3.jpg',
+];
+
+const heroIndex = (() => {
+  const key = 'heroImageIndex';
+  const next = (parseInt(localStorage.getItem(key) || '0', 10) + 1) % heroImages.length;
+  localStorage.setItem(key, next);
+  return next;
+})();
+
 function App() {
   const [openFaq, setOpenFaq] = useState(0);
 
@@ -272,7 +285,7 @@ function App() {
             </a>
           </div>
           <div className="hero-visual">
-            <img src="/assets/hero-desk.png" alt="Knob16 running on an iPhone on a studio desk" />
+            <img src={heroImages[heroIndex]} alt="Knob16 running on an iPhone on a studio desk" />
           </div>
         </section>
 
