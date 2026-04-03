@@ -113,7 +113,7 @@ const deepDive = [
     tag: 'CONNECTIVITY',
     title: 'USB, Bluetooth, Wi-Fi',
     body: 'Three ways to connect. USB for zero-latency studio work. Bluetooth for cable-free setups. Wi-Fi for network MIDI across the room.',
-    image: '/assets/connectivity.png',
+    image: '/assets/Connection-Preview.jpg',
     imageAlt: 'Connectivity options visual',
     reverse: true,
   },
@@ -122,7 +122,7 @@ const deepDive = [
     tag: 'MPE',
     title: 'Expressive multitouch',
     body: 'MIDI Polyphonic Expression turns your screen into an expressive instrument. Per-note pitch, pressure, and slide. Compatible with MPE synths.',
-    image: '/assets/mpe.png',
+    image: '/assets/MPE-Preview.jpg',
     imageAlt: 'MPE performance mode visual',
   },
 ];
@@ -352,6 +352,7 @@ function App() {
         </section>
 
         <section className="section section-divider" id="proof">
+          <SectionHeader title="Stop clicking, start controlling" />
           <div className="testimonials-grid">
             {testimonials.map((item, index) => (
               <article className={`quote-card tone-${['green', 'blue', 'cyan'][index]}`} key={item.author}>
