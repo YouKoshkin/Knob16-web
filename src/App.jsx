@@ -320,7 +320,7 @@ function App() {
 
         <section className="section section-divider" id="features">
           <SectionHeader eyebrow="SERIOUS TOOLS" title="Runs deeper than it looks" />
-          <div className="card-grid">
+          <div className="card-grid card-grid-2col">
             {valueProps.map((item) => (
               <article className={`feature-card tone-${item.tone}`} key={item.title}>
                 <h3>{item.title}</h3>
