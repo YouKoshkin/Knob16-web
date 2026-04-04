@@ -796,6 +796,36 @@ select {
   padding-bottom: 112px;
 }
 
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.spec-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #0A0A0A;
+  border: 1px solid #1E1E22;
+  border-radius: 6px;
+}
+
+.spec-card h3 {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.spec-card p {
+  font-size: 14px;
+  color: #A1A1AA;
+  margin: 0;
+}
+
 .faq-list {
   max-width: 880px;
   margin: 0 auto;

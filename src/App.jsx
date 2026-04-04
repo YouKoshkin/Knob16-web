@@ -440,6 +440,28 @@ function App() {
           </small>
         </section>
 
+        <section className="section section-divider section-specs" id="specs">
+          <SectionHeader eyebrow="WHAT YOU GET" title="Everything included." subcopy="No tiers. No add-ons. Full control from day one." />
+          <div className="specs-grid">
+            {[
+              { title: 'Knobs', desc: '64 total · 16 per bank · 4 banks 7-bit CC or 2 banks 14-bit CC' },
+              { title: 'Resolution', desc: '7-bit: 128 steps · 14-bit: 16,384 steps' },
+              { title: 'Groups', desc: 'Up to 16 groups · 4 per bank · Linear, Exponential, Logarithmic curves' },
+              { title: 'Snapshots', desc: '4 per bank · 16 total' },
+              { title: 'Notes Mode', desc: '16 pads per bank · 29 scales · Transpose ±12 semitones' },
+              { title: 'MPE', desc: 'Up to 5 simultaneous touches · Pitch Bend · Pressure · CC74' },
+              { title: 'Connectivity', desc: 'USB · Bluetooth MIDI · Network MIDI (Wi-Fi)' },
+              { title: 'Platforms', desc: 'iPhone · iPad · iOS 18.6+' },
+              { title: 'Compatibility', desc: 'If it speaks MIDI, it works' },
+            ].map((item) => (
+              <div className="spec-card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         <section className="section section-divider section-cta">
           <h2>
             Your iPhone is already
