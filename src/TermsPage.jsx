@@ -55,7 +55,7 @@ const sections = [
     bullets: [
       'Ensuring your MIDI hardware and software are configured correctly',
       'Any unintended parameter changes on connected instruments, DAWs, or hardware caused by MIDI messages sent from the App',
-      'Proper USB, Bluetooth, or Network MIDI setup on your device',
+      'Proper USB, Bluetooth MIDI, or Network MIDI setup on your device',
     ],
     subSections: [
       {

@@ -15,7 +15,7 @@ const sections = [
       'A short description of the problem',
       'What you were trying to do',
       'Your device model and iOS/iPadOS version',
-      'Whether you were using USB, Bluetooth, or Wi-Fi MIDI',
+      'Whether you were using USB, Bluetooth MIDI, or Wi-Fi MIDI',
       'Which app, DAW, or hardware you were connected to',
       'Any screenshots or screen recordings that show the issue',
     ],

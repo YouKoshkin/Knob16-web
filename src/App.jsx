@@ -111,8 +111,8 @@ const deepDive = [
   {
     tone: 'cyan',
     tag: 'CONNECTIVITY',
-    title: 'USB, Bluetooth, Wi-Fi',
-    body: 'Three ways to connect. USB for zero-latency studio work. Bluetooth for cable-free setups. Wi-Fi for network MIDI across the room.',
+    title: 'USB, Bluetooth MIDI, Wi-Fi',
+    body: 'Three ways to connect. USB for zero-latency studio work. Bluetooth MIDI for cable-free setups. Wi-Fi for network MIDI across the room.',
     image: '/assets/Connection-preview.jpg',
     imageAlt: 'Connectivity options visual',
     reverse: true,
@@ -168,7 +168,7 @@ const useCases = [
   {
     tone: 'amber',
     title: "\"I'm not in the studio.\"",
-    body: 'Hotel room, rehearsal space, train with a laptop. No controller in the bag. But the phone is in your pocket. Wi-Fi or Bluetooth, no cables needed.',
+    body: 'Hotel room, rehearsal space, train with a laptop. No controller in the bag. But the phone is in your pocket. Wi-Fi or Bluetooth MIDI, no cables needed.',
   },
   {
     tone: 'cyan',
@@ -185,7 +185,7 @@ const useCases = [
 const faqItems = [
   {
     question: 'How low is the latency?',
-    answer: 'Typical end-to-end response is around 2ms over USB, about 8ms over Bluetooth, and roughly 10ms over Wi-Fi on modern iPhone and iPad hardware.',
+    answer: 'Typical end-to-end response is around 2ms over USB, about 8ms over Bluetooth MIDI, and roughly 10ms over Wi-Fi on modern iPhone and iPad hardware.',
   },
   {
     question: 'Is this a subscription or a one-time purchase?',

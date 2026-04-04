@@ -32,7 +32,7 @@ const sections = [
     ],
   },
   {
-    title: 'Bluetooth & Network',
+    title: 'Bluetooth MIDI & Network',
     paragraphs: [
       'The app may use Bluetooth and local network connections to communicate with MIDI devices. These connections are direct and peer-to-peer; no data passes through our servers.',
     ],
