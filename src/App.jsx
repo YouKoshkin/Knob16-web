@@ -71,7 +71,7 @@ const deepDive = [
     tag: 'PRECISION',
     title: '14-bit resolution',
     body: '16,384 steps per knob instead of 128. Smooth, precise control over every parameter. No stepping, no zipper noise.',
-    image: '/assets/14bit-Preview.png',
+    image: '/assets/14bit.jpg',
     imageAlt: '14-bit versus 7-bit automation comparison',
   },
   {
@@ -88,7 +88,7 @@ const deepDive = [
     tag: 'VCA GROUPING',
     title: 'Linked control groups',
     body: 'Group multiple knobs under a single master. Adjust relative levels while preserving the mix balance. Essential for live performance.',
-    image: '/assets/vca.png',
+    image: '/assets/VCA-Preview.jpg',
     imageAlt: 'VCA grouping visualization',
   },
   {
@@ -113,7 +113,7 @@ const deepDive = [
     tag: 'CONNECTIVITY',
     title: 'USB, Bluetooth, Wi-Fi',
     body: 'Three ways to connect. USB for zero-latency studio work. Bluetooth for cable-free setups. Wi-Fi for network MIDI across the room.',
-    image: '/assets/Connection-Preview.jpg',
+    image: '/assets/Connection-preview.jpg',
     imageAlt: 'Connectivity options visual',
     reverse: true,
   },
