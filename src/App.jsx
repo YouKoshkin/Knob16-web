@@ -391,33 +391,6 @@ function App() {
           </div>
         </section>
 
-        <section className="section section-divider" id="proof">
-          <SectionHeader title="Stop clicking, start controlling" />
-          <div className="testimonials-grid">
-            {testimonials.map((item, index) => (
-              <article className={`quote-card tone-${['green', 'blue', 'cyan'][index]}`} key={item.author}>
-                <p>&ldquo;{item.quote}&rdquo;</p>
-                <span>{item.author}</span>
-              </article>
-            ))}
-          </div>
-          <div className="proof-meta">
-            <div className="rating-row">
-              <span className="rating-stars">★★★★★</span>
-              <span className="rating-text">4.9 on the App Store</span>
-            </div>
-            <div className="logo-row">
-              <span>Ableton Live</span>
-              <span>Logic Pro</span>
-              <span>FL Studio</span>
-              <span>Traktor Pro</span>
-              <span>Serato DJ</span>
-              <span>Rekordbox</span>
-            </div>
-            <div className="rating-text">If it speaks MIDI, it works</div>
-          </div>
-        </section>
-
         <section className="section section-alt" id="demo">
           <SectionHeader
             eyebrow="SEE IT IN ACTION"
@@ -463,6 +436,33 @@ function App() {
                 </article>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="section section-divider" id="proof">
+          <SectionHeader title="Stop clicking, start controlling" />
+          <div className="testimonials-grid">
+            {testimonials.map((item, index) => (
+              <article className={`quote-card tone-${['green', 'blue', 'cyan'][index]}`} key={item.author}>
+                <p>&ldquo;{item.quote}&rdquo;</p>
+                <span>{item.author}</span>
+              </article>
+            ))}
+          </div>
+          <div className="proof-meta">
+            <div className="rating-row">
+              <span className="rating-stars">★★★★★</span>
+              <span className="rating-text">4.9 on the App Store</span>
+            </div>
+            <div className="logo-row">
+              <span>Ableton Live</span>
+              <span>Logic Pro</span>
+              <span>FL Studio</span>
+              <span>Traktor Pro</span>
+              <span>Serato DJ</span>
+              <span>Rekordbox</span>
+            </div>
+            <div className="rating-text">If it speaks MIDI, it works</div>
           </div>
         </section>
 
@@ -532,16 +532,6 @@ function App() {
               data-analytics-target-path="#pricing"
             >
               Turn it on
-            </a>
-            <a
-              className="text-link"
-              href="#demo"
-              data-analytics-event="cta_click"
-              data-analytics-location="final_cta"
-              data-analytics-label="See demo"
-              data-analytics-target-path="#demo"
-            >
-              See demo →
             </a>
           </div>
         </section>
