@@ -201,6 +201,18 @@ select {
   text-align: center;
 }
 
+.standalone-header-section {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  padding: 56px 0;
+}
+
+.standalone-header-section .section-header {
+  gap: 30px;
+  margin-bottom: 0;
+}
+
 .section-header h2,
 .section-cta h2 {
   margin: 0;

@@ -440,7 +440,6 @@ function App() {
         </section>
 
         <section className="section section-divider" id="proof">
-          <SectionHeader title="Stop clicking, start controlling" />
           <div className="testimonials-grid">
             {testimonials.map((item, index) => (
               <article className={`quote-card tone-${['green', 'blue', 'cyan'][index]}`} key={item.author}>
@@ -462,8 +461,12 @@ function App() {
               <span>Serato DJ</span>
               <span>Rekordbox</span>
             </div>
-            <div className="rating-text">If it speaks MIDI, it works</div>
+            <p className="hero-copy">If it speaks MIDI, it works</p>
           </div>
+        </section>
+
+        <section className="section section-divider standalone-header-section">
+          <SectionHeader title="Stop clicking, start controlling" subcopy="Unlock. Connect. Play." />
         </section>
 
         <section className="section section-pricing" id="pricing">
