@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { trackEvent } from './analytics';
 
 const frictionLeftRows = [
   'Find the bag',
@@ -243,18 +244,43 @@ const heroIndex = (() => {
 function App() {
   const [openFaq, setOpenFaq] = useState(0);
 
+  const handleFaqToggle = (index, question) => {
+    const nextOpen = openFaq !== index;
+    setOpenFaq(nextOpen ? index : -1);
+    trackEvent('faq_toggle', {
+      question,
+      state: nextOpen ? 'open' : 'close',
+      page_path: '/',
+    });
+  };
+
   return (
     <div className="page-shell">
       <header className="topbar">
-        <a className="brand" href="#hero" aria-label="Knob16 home">
+        <a
+          className="brand"
+          href="#hero"
+          aria-label="Knob16 home"
+          data-analytics-event="cta_click"
+          data-analytics-location="header"
+          data-analytics-label="Knob16 home"
+          data-analytics-target-path="#hero"
+        >
           <img src="/assets/DjpXB.png" alt="Knob16" />
         </a>
         <nav className="topnav">
-          <a href="#features">Features</a>
-          <a href="#demo">Demo</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#faq">FAQ</a>
-          <a className="button button-small" href="#pricing">
+          <a href="#features" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="Features" data-analytics-target-path="#features">Features</a>
+          <a href="#demo" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="Demo" data-analytics-target-path="#demo">Demo</a>
+          <a href="#pricing" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="Pricing" data-analytics-target-path="#pricing">Pricing</a>
+          <a href="#faq" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="FAQ" data-analytics-target-path="#faq">FAQ</a>
+          <a
+            className="button button-small"
+            href="#pricing"
+            data-analytics-event="cta_click"
+            data-analytics-location="header"
+            data-analytics-label="Get Knob16"
+            data-analytics-target-path="#pricing"
+          >
             Get Knob16
           </a>
         </nav>
@@ -277,10 +303,24 @@ function App() {
             Works with Ableton Live&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Logic Pro&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;FL Studio&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Traktor&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;and everything else
           </p>
           <div className="hero-actions">
-            <a className="button" href="#pricing">
+            <a
+              className="button"
+              href="#pricing"
+              data-analytics-event="cta_click"
+              data-analytics-location="hero"
+              data-analytics-label="Get Knob16 — 19.99"
+              data-analytics-target-path="#pricing"
+            >
               Get Knob16 — 19.99
             </a>
-            <a className="text-link" href="#demo">
+            <a
+              className="text-link"
+              href="#demo"
+              data-analytics-event="cta_click"
+              data-analytics-location="hero"
+              data-analytics-label="See it in action"
+              data-analytics-target-path="#demo"
+            >
               See it in action →
             </a>
           </div>
@@ -386,7 +426,13 @@ function App() {
           />
           <div className="demo-grid">
             {demos.map((item) => (
-              <article className="demo-card" key={item.title}>
+              <article
+                className="demo-card"
+                key={item.title}
+                data-analytics-event="demo_click"
+                data-analytics-demo-title={item.title}
+                data-analytics-section="demo"
+              >
                 <div className={`demo-image frame-${item.tone}`}>
                   <img src={item.image} alt={`${item.title} preview`} />
                   <span className="demo-badge">Loop</span>
@@ -432,7 +478,14 @@ function App() {
           <p className="pricing-copy">
             No subscription&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;No tiers&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;Yours forever
           </p>
-          <a className="button" href="#footer">
+          <a
+            className="button"
+            href="#footer"
+            data-analytics-event="cta_click"
+            data-analytics-location="pricing"
+            data-analytics-label="Get Knob16"
+            data-analytics-target-path="#footer"
+          >
             Get Knob16
           </a>
           <small className="trust-copy">
@@ -470,10 +523,24 @@ function App() {
           </h2>
           <p className="cta-copy">This just turns it on</p>
           <div className="hero-actions">
-            <a className="button" href="#pricing">
+            <a
+              className="button"
+              href="#pricing"
+              data-analytics-event="cta_click"
+              data-analytics-location="final_cta"
+              data-analytics-label="Turn it on"
+              data-analytics-target-path="#pricing"
+            >
               Turn it on
             </a>
-            <a className="text-link" href="#demo">
+            <a
+              className="text-link"
+              href="#demo"
+              data-analytics-event="cta_click"
+              data-analytics-location="final_cta"
+              data-analytics-label="See demo"
+              data-analytics-target-path="#demo"
+            >
               See demo →
             </a>
           </div>
@@ -489,7 +556,7 @@ function App() {
                   <button
                     className="faq-question"
                     type="button"
-                    onClick={() => setOpenFaq(open ? -1 : index)}
+                    onClick={() => handleFaqToggle(index, item.question)}
                   >
                     <span>{item.question}</span>
                     <span>{open ? '−' : '+'}</span>
@@ -511,10 +578,10 @@ function App() {
           </div>
         </div>
         <div className="footer-links">
-          <a href="/privacy">Privacy</a>
-          <a href="/terms">Terms</a>
-          <a href="/support">Contact</a>
-          <a href="#demo">Press Kit</a>
+          <a href="/privacy" data-analytics-event="cta_click" data-analytics-location="footer" data-analytics-label="Privacy" data-analytics-target-path="/privacy">Privacy</a>
+          <a href="/terms" data-analytics-event="cta_click" data-analytics-location="footer" data-analytics-label="Terms" data-analytics-target-path="/terms">Terms</a>
+          <a href="/support" data-analytics-event="cta_click" data-analytics-location="footer" data-analytics-label="Contact" data-analytics-target-path="/support">Contact</a>
+          <a href="#demo" data-analytics-event="cta_click" data-analytics-location="footer" data-analytics-label="Press Kit" data-analytics-target-path="#demo">Press Kit</a>
         </div>
       </footer>
     </div>

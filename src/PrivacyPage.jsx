@@ -26,9 +26,10 @@ const sections = [
     ],
   },
   {
-    title: 'No Analytics or Tracking',
+    title: 'Website Analytics',
     paragraphs: [
-      'We do not use any analytics, tracking, or crash reporting tools. Your usage of this app is completely private.',
+      'The Knob16 iOS app does not use analytics, tracking, or crash reporting tools. Your usage of the app remains private.',
+      'The Knob16 website may use privacy-conscious website analytics to understand page visits, downloads, and engagement so we can improve the site experience.',
     ],
   },
   {
@@ -73,7 +74,14 @@ export default function PrivacyPage() {
   return (
     <div className="terms-page">
       <div className="terms-wrap">
-        <a className="terms-back" href="/">
+        <a
+          className="terms-back"
+          href="/"
+          data-analytics-event="cta_click"
+          data-analytics-location="privacy"
+          data-analytics-label="Back to site"
+          data-analytics-target-path="/"
+        >
           Back to site
         </a>
         <h1>Privacy Policy – Knob16</h1>

@@ -4,12 +4,24 @@ export default function DownloadsPage() {
   return (
     <div className="terms-page">
       <div className="terms-wrap">
-        <a className="terms-back" href="/">
+        <a
+          className="terms-back"
+          href="/"
+          data-analytics-event="cta_click"
+          data-analytics-location="downloads"
+          data-analytics-label="Back to site"
+          data-analytics-target-path="/"
+        >
           Back to site
         </a>
         <h1>Downloads</h1>
         <p>
-          <a href="/files/Remote%20Scripts.zip" download>
+          <a
+            href="/files/Remote%20Scripts.zip"
+            download
+            data-analytics-event="download_click"
+            data-analytics-file-name="Remote Scripts.zip"
+          >
             Remote Scripts.zip
           </a>{' '}
           — 12.3 KB — Modified April 2, 2026

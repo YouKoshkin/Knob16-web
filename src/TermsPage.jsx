@@ -69,7 +69,8 @@ const sections = [
   {
     title: '7. User Data and Privacy',
     paragraphs: [
-      'The App collects no personal information. All settings and presets are stored locally on your device. We do not use analytics, crash reporting, advertising frameworks, or any third-party tracking tools.',
+      'The App collects no personal information. All settings and presets are stored locally on your device. We do not use analytics, crash reporting, advertising frameworks, or any third-party tracking tools inside the Knob16 iOS app.',
+      'The Knob16 website may use website analytics to measure visits, engagement, and downloads.',
       'For full details, see the Privacy Policy accessible within the App.',
     ],
   },
@@ -183,7 +184,14 @@ export default function TermsPage() {
   return (
     <div className="terms-page">
       <div className="terms-wrap">
-        <a className="terms-back" href="/">
+        <a
+          className="terms-back"
+          href="/"
+          data-analytics-event="cta_click"
+          data-analytics-location="terms"
+          data-analytics-label="Back to site"
+          data-analytics-target-path="/"
+        >
           Back to site
         </a>
         <h1>Terms &amp; Conditions</h1>
@@ -197,7 +205,15 @@ export default function TermsPage() {
         <section className="terms-section">
           <p>
             <strong>Support:</strong>{' '}
-            <a href="mailto:support@knob16.com">support@knob16.com</a>
+            <a
+              href="mailto:support@knob16.com"
+              data-analytics-event="contact_click"
+              data-analytics-location="terms"
+              data-analytics-label="support@knob16.com"
+              data-analytics-target-path="mailto:support@knob16.com"
+            >
+              support@knob16.com
+            </a>
           </p>
         </section>
         <p className="terms-note">
