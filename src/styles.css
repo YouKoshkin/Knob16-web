@@ -875,6 +875,16 @@ select {
   align-items: center;
   justify-content: center;
   gap: 12px;
+  position: relative;
+}
+
+.early-access-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .early-access-input {
