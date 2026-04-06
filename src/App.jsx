@@ -336,13 +336,13 @@ function App() {
           <a href="#faq" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="FAQ" data-analytics-target-path="#faq">FAQ</a>
           <a
             className="button button-small"
-            href="#pricing"
+            href="#early-access"
             data-analytics-event="cta_click"
             data-analytics-location="header"
-            data-analytics-label="Get Knob16"
-            data-analytics-target-path="#pricing"
+            data-analytics-label="Get early access"
+            data-analytics-target-path="#early-access"
           >
-            Get Knob16
+            Get early access
           </a>
         </nav>
       </header>
@@ -366,13 +366,13 @@ function App() {
           <div className="hero-actions">
             <a
               className="button"
-              href="#pricing"
+              href="#early-access"
               data-analytics-event="cta_click"
               data-analytics-location="hero"
-              data-analytics-label="Get Knob16 — 19.99"
-              data-analytics-target-path="#pricing"
+              data-analytics-label="Get early access"
+              data-analytics-target-path="#early-access"
             >
-              Get Knob16 — 19.99
+              Get early access
             </a>
             <a
               className="text-link"
@@ -544,13 +544,13 @@ function App() {
           </p>
           <a
             className="button"
-            href="#footer"
+            href="#early-access"
             data-analytics-event="cta_click"
             data-analytics-location="pricing"
-            data-analytics-label="Get Knob16"
-            data-analytics-target-path="#footer"
+            data-analytics-label="Get early access"
+            data-analytics-target-path="#early-access"
           >
-            Get Knob16
+            Get early access
           </a>
           <small className="trust-copy">
             30-day money-back guarantee&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;No account required
@@ -623,7 +623,7 @@ function App() {
                     disabled={earlyAccessStatus === 'submitting'}
                   />
                   <button className="early-access-button" type="submit" disabled={earlyAccessStatus === 'submitting'}>
-                    {earlyAccessStatus === 'submitting' ? 'Sending...' : 'Get early access →'}
+                    {earlyAccessStatus === 'submitting' ? 'Sending...' : 'Get early access'}
                   </button>
                 </form>
                 <p className="early-access-subcopy">No spam. We'll reach out personally.</p>
