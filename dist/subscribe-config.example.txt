@@ -1,0 +1,12 @@
+Set these server-side environment variables for `subscribe.php`:
+
+LOOPS_API_KEY=your_loops_api_key
+LOOPS_FORM_ENDPOINT_URL=https://app.loops.so/api/newsletter-form/your_form_id
+LOOPS_MAILING_LIST_IDS=your_public_early_access_list_id
+LOOPS_SOURCE=website
+LOOPS_USER_GROUP=Early Access
+
+Notes:
+- `LOOPS_FORM_ENDPOINT_URL` comes from Loops -> Forms -> Settings -> Form Endpoint.
+- `LOOPS_MAILING_LIST_IDS` is optional, but needed if you want signups added to the public "Early Access" mailing list.
+- The form endpoint preserves Loops double opt-in behavior.

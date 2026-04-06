@@ -243,6 +243,9 @@ const heroIndex = (() => {
 
 function App() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [earlyAccessEmail, setEarlyAccessEmail] = useState('');
+  const [earlyAccessStatus, setEarlyAccessStatus] = useState('idle');
+  const [earlyAccessError, setEarlyAccessError] = useState('');
 
   const handleFaqToggle = (index, question) => {
     const nextOpen = openFaq !== index;
@@ -252,6 +255,64 @@ function App() {
       state: nextOpen ? 'open' : 'close',
       page_path: '/',
     });
+  };
+
+  const handleEarlyAccessSubmit = async (event) => {
+    event.preventDefault();
+
+    const normalizedEmail = earlyAccessEmail.trim().toLowerCase();
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail);
+
+    if (!isValidEmail) {
+      setEarlyAccessStatus('error');
+      setEarlyAccessError('Enter a valid email address.');
+      return;
+    }
+
+    setEarlyAccessStatus('submitting');
+    setEarlyAccessError('');
+
+    try {
+      const response = await fetch('/subscribe.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: normalizedEmail,
+          company: '',
+        }),
+      });
+
+      const data = await response.json().catch(() => ({ success: false, error: 'server_error' }));
+
+      if (response.ok && data.success) {
+        setEarlyAccessStatus('success');
+        trackEvent('email_capture_submit', {
+          location: 'early_access',
+          outcome: 'success',
+          page_path: '/',
+        });
+        return;
+      }
+
+      if (data.error === 'already_subscribed') {
+        setEarlyAccessStatus('duplicate');
+        return;
+      }
+
+      if (data.error === 'invalid_email') {
+        setEarlyAccessStatus('error');
+        setEarlyAccessError('Enter a valid email address.');
+        return;
+      }
+
+      setEarlyAccessStatus('error');
+      setEarlyAccessError('Something went wrong. Try again.');
+    } catch {
+      setEarlyAccessStatus('error');
+      setEarlyAccessError('Something went wrong. Try again.');
+    }
   };
 
   return (
@@ -515,6 +576,62 @@ function App() {
                 <p dangerouslySetInnerHTML={{ __html: item.desc }} />
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="section section-divider section-early-access" id="early-access">
+          <div className="early-access-inner">
+            <h2>Want in before the public launch?</h2>
+            {earlyAccessStatus === 'success' ? (
+              <p className="early-access-message early-access-message-success">
+                Check your inbox to confirm your spot.
+              </p>
+            ) : earlyAccessStatus === 'duplicate' ? (
+              <p className="early-access-message early-access-message-success">
+                You're already on the list.
+              </p>
+            ) : (
+              <>
+                <form className="early-access-form" onSubmit={handleEarlyAccessSubmit}>
+                  <label className="sr-only" htmlFor="early-access-email">
+                    Email address
+                  </label>
+                  <input
+                    className="early-access-honeypot"
+                    type="text"
+                    name="company"
+                    tabIndex="-1"
+                    autoComplete="off"
+                    aria-hidden="true"
+                  />
+                  <input
+                    id="early-access-email"
+                    className="early-access-input"
+                    type="email"
+                    inputMode="email"
+                    autoComplete="email"
+                    placeholder="prog@domain.com"
+                    value={earlyAccessEmail}
+                    onChange={(event) => {
+                      setEarlyAccessEmail(event.target.value);
+                      if (earlyAccessStatus === 'error' || earlyAccessStatus === 'duplicate') {
+                        setEarlyAccessStatus('idle');
+                        setEarlyAccessError('');
+                      }
+                    }}
+                    aria-invalid={earlyAccessStatus === 'error'}
+                    disabled={earlyAccessStatus === 'submitting'}
+                  />
+                  <button className="early-access-button" type="submit" disabled={earlyAccessStatus === 'submitting'}>
+                    {earlyAccessStatus === 'submitting' ? 'Sending...' : 'Get early access →'}
+                  </button>
+                </form>
+                <p className="early-access-subcopy">No spam. We'll reach out personally.</p>
+                {earlyAccessStatus === 'error' ? (
+                  <p className="early-access-message">{earlyAccessError}</p>
+                ) : null}
+              </>
+            )}
           </div>
         </section>
 

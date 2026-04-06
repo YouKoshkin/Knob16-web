@@ -1,5 +1,12 @@
 Options -Indexes
 
+SetEnv LOOPS_API_KEY "your_key_here"
+SetEnv LOOPS_FORM_ENDPOINT_URL
+"https://app.loops.so/api/newsletter-form/your_form_id"
+SetEnv LOOPS_MAILING_LIST_IDS "your_list_id"
+SetEnv LOOPS_SOURCE "website"
+SetEnv LOOPS_USER_GROUP "Early Access"
+
 RewriteEngine On
 
 RewriteBase /

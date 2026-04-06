@@ -14,7 +14,7 @@ const pages = {
   '/': {
     component: App,
     title: 'Knob16 | iPhone MIDI Controller for Ableton, Logic Pro, and More',
-    sectionIds: ['hero', 'features', 'deep-dive', 'demo', 'pricing', 'faq', 'footer'],
+    sectionIds: ['hero', 'features', 'deep-dive', 'demo', 'pricing', 'early-access', 'faq', 'footer'],
   },
   '/downloads': {
     component: DownloadsPage,
