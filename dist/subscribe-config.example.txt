@@ -10,3 +10,5 @@ Notes:
 - `LOOPS_FORM_ENDPOINT_URL` comes from Loops -> Forms -> Settings -> Form Endpoint.
 - `LOOPS_MAILING_LIST_IDS` is optional, but needed if you want signups added to the public "Early Access" mailing list.
 - The form endpoint preserves Loops double opt-in behavior.
+- Recommended Loops sending domain: `updates.knob16.com`.
+- Avoid using `mail.knob16.com` for Loops if that subdomain is already part of your normal cPanel mail setup.

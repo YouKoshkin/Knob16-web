@@ -610,7 +610,7 @@ function App() {
                     type="email"
                     inputMode="email"
                     autoComplete="email"
-                    placeholder="prog@domain.com"
+                    placeholder="you@email.com"
                     value={earlyAccessEmail}
                     onChange={(event) => {
                       setEarlyAccessEmail(event.target.value);
