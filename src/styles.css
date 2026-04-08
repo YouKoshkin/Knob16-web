@@ -1096,6 +1096,7 @@ select {
     width: min(100vw - 32px, 960px);
   }
 
+  .specs-grid,
   .stats-grid,
   .testimonials-grid,
   .card-grid,
@@ -1172,6 +1173,7 @@ select {
   }
 
   .comparison-table,
+  .specs-grid,
   .stats-grid,
   .testimonials-grid,
   .card-grid,
