@@ -71,7 +71,7 @@ const deepDive = [
     tone: 'green',
     tag: 'PRECISION',
     title: '14-bit resolution',
-    body: '16,384 steps per knob instead of 128. Smooth, precise control over every parameter. No stepping, no zipper noise.',
+    body: '16,384 steps per knob instead of 128. Smooth, precise control over every parameter. No stepping, no zipper noise. Includes NRPN support.',
     image: '/assets/14bit.jpg',
     imageAlt: '14-bit versus 7-bit automation comparison',
   },
@@ -185,36 +185,56 @@ const useCases = [
 
 const faqItems = [
   {
-    question: 'How low is the latency?',
-    answer: 'Typical end-to-end response is around 2ms over USB, about 8ms over Bluetooth MIDI, and roughly 10ms over Wi-Fi on modern iPhone and iPad hardware.',
+    question: 'How many presets can I store?',
+    answer: 'Unlimited.',
   },
   {
-    question: 'Is this a subscription or a one-time purchase?',
-    answer: 'One-time purchase. No subscription, no tiers, and every feature is included.',
+    question: "What's the actual BLE MIDI latency floor?",
+    answer: 'Around 10–15 ms best case on modern hardware, 15–25 ms realistic average, with 2–12 ms jitter. For CC control — filter sweeps, macro knobs, mixer automation — this is imperceptible. Jitter matters more than raw latency anyway. USB is the right choice if timing is critical.',
   },
   {
-    question: 'Will it work with my DAW?',
-    answer: 'It works with Ableton Live, Logic Pro, FL Studio, Bitwig, MainStage, and a wide range of MIDI apps and hardware setups.',
+    question: 'Does it work in Airplane Mode over USB?',
+    answer: 'Yes. USB MIDI is entirely local — no network, no Wi-Fi needed. Airplane Mode has zero effect on the USB connection.',
   },
   {
-    question: 'Does it work over Wi-Fi?',
-    answer: 'Yes. Knob16 works over Wi-Fi in addition to USB and Bluetooth MIDI.',
+    question: 'Can I assign different MIDI channels per knob?',
+    answer: 'Yes. Every knob has its own MIDI channel assignment. Drive a synth on ch1, a drum machine on ch10, and a reverb unit on ch16 — all from a single bank, simultaneously.',
   },
   {
-    question: "What's 14-bit MIDI?",
-    answer: 'Standard CC gives you 128 steps. 14-bit CC pairs MSB and LSB messages for 16,384 steps, which makes fine control noticeably smoother.',
+    question: 'Is USB MIDI class-compliant — no driver needed?',
+    answer: 'Yes. USB MIDI is class-compliant. Plug into Mac, iPad, or any class-compliant host and it works immediately — no driver installation.',
   },
   {
-    question: "What's MPE?",
-    answer: 'MPE is MIDI Polyphonic Expression. Each note gets its own expressive lane for pitch, pressure, and slide, which is how touchscreen performance becomes playable.',
+    question: 'Can I export/import presets to share with others?',
+    answer: 'Yes. Export and import preset files to back up your mappings or share them with other Knob16 users.',
   },
   {
-    question: 'iPhone or iPad?',
-    answer: 'The product story is built around iPhone, and iPad is supported as a larger secondary surface.',
+    question: 'Can knobs receive MIDI — for DAW feedback and sync?',
+    answer: 'Yes. Knob16 receives CC feedback from your DAW, keeping every knob display in sync with the actual parameter value. The knob is always where the DAW says it is.',
   },
   {
-    question: 'Can I use it live without a laptop?',
-    answer: 'Yes, if your destination hardware or app accepts MIDI input. Knob16 can drive synths and mobile setups directly.',
+    question: 'Can I map one knob to multiple CC numbers simultaneously?',
+    answer: 'Not directly. Use a group to link multiple knobs and control them in unison.',
+  },
+  {
+    question: 'Does it send CC values on connect, or only on movement?',
+    answer: 'Only on movement. Use a snapshot to push the full bank state at any point.',
+  },
+  {
+    question: "What's the CC range — can I invert or limit it per knob?",
+    answer: 'Yes. Set a custom min/max range per knob anywhere within 0–127. Inversion is available when the knob is part of a group.',
+  },
+  {
+    question: 'Can I run multiple instances — two iPhones in the same session?',
+    answer: 'Yes — multiple devices work in the same session simultaneously.',
+  },
+  {
+    question: 'Does Blue Hand work with return tracks and sends, or macro knobs only?',
+    answer: 'Currently macro knobs only. Return tracks and sends are on the roadmap.',
+  },
+  {
+    question: 'Does it work with hardware synths directly, no Mac in the middle?',
+    answer: 'Yes. Connect over Bluetooth LE MIDI directly to any BLE MIDI-capable synth or groovebox. USB works too via a Lightning or USB-C adapter to a class-compliant host. No computer required.',
   },
 ];
 
@@ -561,7 +581,7 @@ function App() {
           <SectionHeader eyebrow="WHAT YOU GET" title="Everything included." subcopy="No tiers. No add-ons. Full control from day one." />
           <div className="specs-grid">
             {[
-              { title: 'Knobs', desc: '64 total · 16 per bank<br/>4 banks 7-bit CC or 2 banks 14-bit CC' },
+              { title: 'Knobs', desc: '64 total · 16 per bank<br/>Per-knob mode: 7-bit CC, 14-bit CC or NRPN' },
               { title: 'Resolution', desc: '7-bit: 128 steps<br/>14-bit: 16,384 steps' },
               { title: 'Groups', desc: 'Up to 16 groups · 4 per bank<br/>Linear, Exponential, Logarithmic curves' },
               { title: 'Snapshots', desc: '4 per bank · 16 total' },

@@ -85,7 +85,7 @@ Every detail, considered
 
 #### 14-bit resolution
 
-16,384 steps per knob instead of 128. Smooth, precise control over every parameter. No stepping, no zipper noise.
+16,384 steps per knob instead of 128. Smooth, precise control over every parameter. No stepping, no zipper noise. Includes NRPN support.
 
 ### EASY SETUP
 
@@ -226,37 +226,57 @@ FAQ
 
 Questions before you buy?
 
-### How low is the latency?
+### How many presets can I store?
 
-Typical end-to-end response is around 2ms over USB, about 8ms over Bluetooth, and roughly 10ms over Wi-Fi on modern iPhone and iPad hardware.
+Unlimited.
 
-### Is this a subscription or a one-time purchase?
+### What's the actual BLE MIDI latency floor?
 
-One-time purchase. No subscription, no tiers, and every feature is included.
+Around 10–15 ms best case on modern hardware, 15–25 ms realistic average, with 2–12 ms jitter. For CC control — filter sweeps, macro knobs, mixer automation — this is imperceptible. Jitter matters more than raw latency anyway. USB is the right choice if timing is critical.
 
-### Will it work with my DAW?
+### Does it work in Airplane Mode over USB?
 
-It works with Ableton Live, Logic Pro, FL Studio, Bitwig, MainStage, and a wide range of MIDI apps and hardware setups.
+Yes. USB MIDI is entirely local — no network, no Wi-Fi needed. Airplane Mode has zero effect on the USB connection.
 
-### Does it work over Wi-Fi?
+### Can I assign different MIDI channels per knob?
 
-Yes. Knob16 works over Wi-Fi in addition to USB and Bluetooth MIDI.
+Yes. Every knob has its own MIDI channel assignment. Drive a synth on ch1, a drum machine on ch10, and a reverb unit on ch16 — all from a single bank, simultaneously.
 
-### What's 14-bit MIDI?
+### Is USB MIDI class-compliant — no driver needed?
 
-Standard CC gives you 128 steps. 14-bit CC pairs MSB and LSB messages for 16,384 steps, which makes fine control noticeably smoother.
+Yes. USB MIDI is class-compliant. Plug into Mac, iPad, or any class-compliant host and it works immediately — no driver installation.
 
-### What's MPE?
+### Can I export/import presets to share with others?
 
-MPE is MIDI Polyphonic Expression. Each note gets its own expressive lane for pitch, pressure, and slide, which is how touchscreen performance becomes playable.
+Yes. Export and import preset files to back up your mappings or share them with other Knob16 users.
 
-### iPhone or iPad?
+### Can knobs receive MIDI — for DAW feedback and sync?
 
-The product story is built around iPhone, and iPad is supported as a larger secondary surface.
+Yes. Knob16 receives CC feedback from your DAW, keeping every knob display in sync with the actual parameter value. The knob is always where the DAW says it is.
 
-### Can I use it live without a laptop?
+### Can I map one knob to multiple CC numbers simultaneously?
 
-Yes, if your destination hardware or app accepts MIDI input. Knob16 can drive synths and mobile setups directly.
+Not directly. Use a group to link multiple knobs and control them in unison.
+
+### Does it send CC values on connect, or only on movement?
+
+Only on movement. Use a snapshot to push the full bank state at any point.
+
+### What's the CC range — can I invert or limit it per knob?
+
+Yes. Set a custom min/max range per knob anywhere within 0–127. Inversion is available when the knob is part of a group.
+
+### Does Blue Hand work with return tracks and sends, or macro knobs only?
+
+Currently macro knobs only. Return tracks and sends are on the roadmap.
+
+### Can I run multiple instances — two iPhones in the same session?
+
+Yes — multiple devices work in the same session simultaneously.
+
+### Does it work with hardware synths directly, no Mac in the middle?
+
+Yes. Connect over Bluetooth LE MIDI directly to any BLE MIDI-capable synth or groovebox. USB works too via a Lightning or USB-C adapter to a class-compliant host. No computer required.
 
 ## Footer
 
