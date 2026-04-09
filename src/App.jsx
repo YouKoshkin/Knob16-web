@@ -133,25 +133,25 @@ const demos = [
     tone: 'blue',
     title: 'Blue Hand Integration',
     text: 'Focused device changes. Labels update live from Ableton.',
-    image: '/assets/demo-bluehand.png',
+    image: '/assets/vid-placeholder.png',
   },
   {
     tone: 'red',
     title: 'VCA Grouping',
     text: 'One leader knob, multiple followers with output curves.',
-    image: '/assets/demo-vca.png',
+    image: '/assets/vid-placeholder.png',
   },
   {
     tone: 'amber',
     title: 'Snapshot Recall',
     text: 'Four snapshots. Knobs jump. Instant recall.',
-    image: '/assets/demo-setup.png',
+    image: '/assets/vid-placeholder.png',
   },
   {
     tone: 'pink',
     title: 'MPE Multi-Pad',
     text: 'Multiple pads, pitch bend rings, per-note DAW lanes.',
-    image: '/assets/demo-mpe.png',
+    image: '/assets/vid-placeholder.png',
   },
 ];
 
@@ -520,6 +520,7 @@ function App() {
           </div>
         </section>
 
+        {/* Testimonials section — hidden, re-enable when ready
         <section className="section section-divider" id="proof">
           <div className="testimonials-grid">
             {testimonials.map((item, index) => (
@@ -545,6 +546,7 @@ function App() {
             <p className="hero-copy">If it speaks MIDI, it works</p>
           </div>
         </section>
+        */}
 
         <section className="section section-divider standalone-header-section">
           <SectionHeader title="Stop clicking, start controlling" subcopy="Unlock. Connect. Play." />
