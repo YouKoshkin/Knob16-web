@@ -230,7 +230,7 @@ const faqItems = [
   },
   {
     question: 'Does Blue Hand work with return tracks and sends, or macro knobs only?',
-    answer: 'Currently macro knobs only. Return tracks and sends are on the roadmap.',
+    answer: 'Blue Hand is part of Live Mode — a dedicated Ableton control surface built into Knob16. It covers three modes: Device (Blue Hand, follows the selected device), Mixer (volume, pan, sends across tracks, including return tracks), and Macros (Rack macro parameters across tracks in configurable layouts).',
   },
   {
     question: 'Does it work with hardware synths directly, no Mac in the middle?',
