@@ -79,7 +79,7 @@ const deepDive = [
     tone: 'pink',
     tag: 'EASY SETUP',
     title: 'MIDI Learn and Blue Hand',
-    body: 'Ableton Live users get full mapping and labeled knobs automatically — just focus a device and play. Every other DAW and hardware setup assigns in seconds using MIDI Learn.',
+    body: 'Ableton Live users get full mapping and labeled knobs automatically — Device, Mixer or Macros modes. Every other DAW and hardware setup assigns in seconds using MIDI Learn.',
     image: '/assets/EasySetup-Preview.jpg',
     imageAlt: 'Knob16 Blue Hand integration visual',
     reverse: true,

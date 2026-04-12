@@ -17,14 +17,14 @@ export default function DownloadsPage() {
         <h1>Downloads</h1>
         <p>
           <a
-            href="/files/Remote%20Scripts%20v1.1.zip"
+            href="/files/Remote%20Scripts%20v1.2.zip"
             download
             data-analytics-event="download_click"
-            data-analytics-file-name="Remote Scripts v1.1.zip"
+            data-analytics-file-name="Remote Scripts v1.2.zip"
           >
-            Remote Scripts v1.1.zip
+            Remote Scripts v1.2.zip
           </a>{' '}
-          — 7.3 KB — Modified April 10, 2026
+          — 22.3 KB — Modified April 12, 2026
         </p>
       </div>
     </div>
