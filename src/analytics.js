@@ -50,11 +50,80 @@ export function trackPageView({ pagePath, pageTitle }) {
   });
 }
 
-export function usePageAnalytics({ pagePath, pageTitle, sectionIds = [] }) {
+function updateMetaTag(selector, attributes) {
+  let tag = document.head.querySelector(selector);
+  if (!tag) {
+    tag = document.createElement('meta');
+    document.head.appendChild(tag);
+  }
+
+  Object.entries(attributes).forEach(([key, value]) => {
+    tag.setAttribute(key, value);
+  });
+}
+
+function updateLinkTag(selector, attributes) {
+  let tag = document.head.querySelector(selector);
+  if (!tag) {
+    tag = document.createElement('link');
+    document.head.appendChild(tag);
+  }
+
+  Object.entries(attributes).forEach(([key, value]) => {
+    tag.setAttribute(key, value);
+  });
+}
+
+function applyPageMetadata({ pagePath, pageTitle, pageDescription, ogImage }) {
+  const canonicalUrl = pagePath === '/'
+    ? 'https://www.knob16.com/'
+    : `https://www.knob16.com${pagePath}`;
+
+  document.title = pageTitle;
+
+  updateMetaTag('meta[name="description"]', {
+    name: 'description',
+    content: pageDescription,
+  });
+  updateMetaTag('meta[property="og:title"]', {
+    property: 'og:title',
+    content: pageTitle,
+  });
+  updateMetaTag('meta[property="og:description"]', {
+    property: 'og:description',
+    content: pageDescription,
+  });
+  updateMetaTag('meta[property="og:url"]', {
+    property: 'og:url',
+    content: canonicalUrl,
+  });
+  updateMetaTag('meta[property="og:image"]', {
+    property: 'og:image',
+    content: ogImage,
+  });
+  updateMetaTag('meta[name="twitter:title"]', {
+    name: 'twitter:title',
+    content: pageTitle,
+  });
+  updateMetaTag('meta[name="twitter:description"]', {
+    name: 'twitter:description',
+    content: pageDescription,
+  });
+  updateMetaTag('meta[name="twitter:image"]', {
+    name: 'twitter:image',
+    content: ogImage,
+  });
+  updateLinkTag('link[rel="canonical"]', {
+    rel: 'canonical',
+    href: canonicalUrl,
+  });
+}
+
+export function usePageAnalytics({ pagePath, pageTitle, pageDescription, ogImage, sectionIds = [] }) {
   useEffect(() => {
-    document.title = pageTitle;
+    applyPageMetadata({ pagePath, pageTitle, pageDescription, ogImage });
     trackPageView({ pagePath, pageTitle });
-  }, [pagePath, pageTitle]);
+  }, [pagePath, pageTitle, pageDescription, ogImage]);
 
   useEffect(() => {
     if (!isProductionAnalyticsEnabled()) {

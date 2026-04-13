@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "seo:public": "node scripts/generate-seo.mjs public",
-    "build": "npm run seo:public && vite build",
+    "seo:dist": "node scripts/generate-seo.mjs dist",
+    "build": "npm run seo:public && vite build && npm run seo:dist && node scripts/generate-route-entrypoints.mjs dist",
     "preview": "vite preview"
   },
   "dependencies": {

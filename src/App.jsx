@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { trackEvent } from './analytics';
 
 const frictionLeftRows = [
@@ -261,11 +261,35 @@ const heroIndex = (() => {
   return next;
 })();
 
-function App() {
+function App({ initialSectionId }) {
   const [openFaq, setOpenFaq] = useState(0);
   const [earlyAccessEmail, setEarlyAccessEmail] = useState('');
   const [earlyAccessStatus, setEarlyAccessStatus] = useState('idle');
   const [earlyAccessError, setEarlyAccessError] = useState('');
+  const currentPagePath = window.location.pathname.replace(/\/+$/, '') || '/';
+
+  useEffect(() => {
+    if (!initialSectionId) {
+      return undefined;
+    }
+
+    let frameId = 0;
+    let nestedFrameId = 0;
+
+    frameId = window.requestAnimationFrame(() => {
+      nestedFrameId = window.requestAnimationFrame(() => {
+        const element = document.getElementById(initialSectionId);
+        if (element) {
+          element.scrollIntoView({ block: 'start' });
+        }
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.cancelAnimationFrame(nestedFrameId);
+    };
+  }, [initialSectionId]);
 
   const handleFaqToggle = (index, question) => {
     const nextOpen = openFaq !== index;
@@ -273,7 +297,7 @@ function App() {
     trackEvent('faq_toggle', {
       question,
       state: nextOpen ? 'open' : 'close',
-      page_path: '/',
+      page_path: currentPagePath,
     });
   };
 
@@ -311,7 +335,7 @@ function App() {
         trackEvent('email_capture_submit', {
           location: 'early_access',
           outcome: 'success',
-          page_path: '/',
+          page_path: currentPagePath,
         });
         return;
       }
@@ -340,20 +364,20 @@ function App() {
       <header className="topbar">
         <a
           className="brand"
-          href="#hero"
+          href="/"
           aria-label="Knob16 home"
           data-analytics-event="cta_click"
           data-analytics-location="header"
           data-analytics-label="Knob16 home"
-          data-analytics-target-path="#hero"
+          data-analytics-target-path="/"
         >
           <img src="/assets/DjpXB.png" alt="Knob16" />
         </a>
         <nav className="topnav">
-          <a href="#features" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="Features" data-analytics-target-path="#features">Features</a>
-          <a href="#demo" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="Demo" data-analytics-target-path="#demo">Demo</a>
-          <a href="#pricing" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="Pricing" data-analytics-target-path="#pricing">Pricing</a>
-          <a href="#faq" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="FAQ" data-analytics-target-path="#faq">FAQ</a>
+          <a href="/features" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="Features" data-analytics-target-path="/features">Features</a>
+          <a href="/demo" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="Demo" data-analytics-target-path="/demo">Demo</a>
+          <a href="/pricing" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="Pricing" data-analytics-target-path="/pricing">Pricing</a>
+          <a href="/faq" data-analytics-event="cta_click" data-analytics-location="header" data-analytics-label="FAQ" data-analytics-target-path="/faq">FAQ</a>
           <a
             className="button button-small"
             href="#early-access"
@@ -396,11 +420,11 @@ function App() {
             </a>
             <a
               className="text-link"
-              href="#demo"
+              href="/demo"
               data-analytics-event="cta_click"
               data-analytics-location="hero"
               data-analytics-label="See it in action"
-              data-analytics-target-path="#demo"
+              data-analytics-target-path="/demo"
             >
               See it in action →
             </a>
@@ -667,11 +691,11 @@ function App() {
           <div className="hero-actions">
             <a
               className="button"
-              href="#pricing"
+              href="/pricing"
               data-analytics-event="cta_click"
               data-analytics-location="final_cta"
               data-analytics-label="Turn it on"
-              data-analytics-target-path="#pricing"
+              data-analytics-target-path="/pricing"
             >
               Turn it on
             </a>
@@ -713,7 +737,7 @@ function App() {
           <a href="/privacy" data-analytics-event="cta_click" data-analytics-location="footer" data-analytics-label="Privacy" data-analytics-target-path="/privacy">Privacy</a>
           <a href="/terms" data-analytics-event="cta_click" data-analytics-location="footer" data-analytics-label="Terms" data-analytics-target-path="/terms">Terms</a>
           <a href="/support" data-analytics-event="cta_click" data-analytics-location="footer" data-analytics-label="Contact" data-analytics-target-path="/support">Contact</a>
-          <a href="#demo" data-analytics-event="cta_click" data-analytics-location="footer" data-analytics-label="Press Kit" data-analytics-target-path="#demo">Press Kit</a>
+          <a href="/demo" data-analytics-event="cta_click" data-analytics-location="footer" data-analytics-label="Press Kit" data-analytics-target-path="/demo">Press Kit</a>
         </div>
       </footer>
     </div>

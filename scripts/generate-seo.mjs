@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { siteMetadata } from '../seo.config.mjs';
+import { sitemapConfig, siteMetadata } from '../seo.config.mjs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,7 +22,7 @@ async function main() {
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${siteMetadata.pages
+${sitemapConfig.pages
   .map(
     (page) => `  <url>
     <loc>${buildUrl(siteUrl, page.path)}</loc>
