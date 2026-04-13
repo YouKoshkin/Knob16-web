@@ -74,6 +74,26 @@ function updateLinkTag(selector, attributes) {
   });
 }
 
+function updateStructuredDataTag(json) {
+  const selector = 'script[data-structured-data="homepage"]';
+  let tag = document.head.querySelector(selector);
+  if (!json) {
+    if (tag) {
+      tag.remove();
+    }
+    return;
+  }
+
+  if (!tag) {
+    tag = document.createElement('script');
+    tag.type = 'application/ld+json';
+    tag.setAttribute('data-structured-data', 'homepage');
+    document.head.appendChild(tag);
+  }
+
+  tag.textContent = json;
+}
+
 function applyPageMetadata({ pagePath, pageTitle, pageDescription, ogImage }) {
   const canonicalUrl = pagePath === '/'
     ? 'https://www.knob16.com/'
@@ -119,11 +139,12 @@ function applyPageMetadata({ pagePath, pageTitle, pageDescription, ogImage }) {
   });
 }
 
-export function usePageAnalytics({ pagePath, pageTitle, pageDescription, ogImage, sectionIds = [] }) {
+export function usePageAnalytics({ pagePath, pageTitle, pageDescription, ogImage, structuredDataJson, sectionIds = [] }) {
   useEffect(() => {
     applyPageMetadata({ pagePath, pageTitle, pageDescription, ogImage });
+    updateStructuredDataTag(structuredDataJson);
     trackPageView({ pagePath, pageTitle });
-  }, [pagePath, pageTitle, pageDescription, ogImage]);
+  }, [pagePath, pageTitle, pageDescription, ogImage, structuredDataJson]);
 
   useEffect(() => {
     if (!isProductionAnalyticsEnabled()) {

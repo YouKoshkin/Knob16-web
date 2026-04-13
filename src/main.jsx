@@ -6,7 +6,8 @@ import PrivacyPage from './PrivacyPage';
 import SupportPage from './SupportPage';
 import TermsPage from './TermsPage';
 import { usePageAnalytics } from './analytics';
-import { normalizePathname, pages } from './siteRoutes';
+import { buildHomepageStructuredDataJson } from './homepageStructuredData';
+import { normalizePathname, pages, siteMetadata } from './siteRoutes';
 import './styles.css';
 
 const pathname = normalizePathname(window.location.pathname);
@@ -18,13 +19,14 @@ const componentMap = {
   terms: TermsPage,
 };
 
-function AnalyticsRoot({ component: Component, pagePath, pageTitle, pageDescription, ogImage, sectionIds = [], initialSectionId }) {
-  usePageAnalytics({ pagePath, pageTitle, pageDescription, ogImage, sectionIds });
+function AnalyticsRoot({ component: Component, pagePath, pageTitle, pageDescription, ogImage, structuredDataJson, sectionIds = [], initialSectionId }) {
+  usePageAnalytics({ pagePath, pageTitle, pageDescription, ogImage, structuredDataJson, sectionIds });
   return <Component initialSectionId={initialSectionId} />;
 }
 
 const currentPage = pages[pathname] ?? pages['/'];
 const CurrentComponent = componentMap[currentPage.component];
+const structuredDataJson = pathname === '/' ? buildHomepageStructuredDataJson(siteMetadata) : '';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -34,6 +36,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       pageTitle={currentPage.title}
       pageDescription={currentPage.description}
       ogImage={currentPage.ogImage}
+      structuredDataJson={structuredDataJson}
       sectionIds={currentPage.sectionIds}
       initialSectionId={currentPage.initialSectionId}
     />
