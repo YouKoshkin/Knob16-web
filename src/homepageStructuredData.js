@@ -8,12 +8,19 @@ const SOFTWARE_FEATURES = [
   'Snapshots, presets, and bidirectional MIDI feedback',
 ];
 
+const SOFTWARE_SCREENSHOTS = [
+  '/assets/screen-1.png',
+  '/assets/screen-2.png',
+  '/assets/screen-3.png',
+];
+
 function escapeJsonForHtml(value) {
   return value.replace(/</g, '\\u003c');
 }
 
 export function buildHomepageStructuredData(siteMetadata) {
   const siteUrl = siteMetadata.siteUrl;
+  const screenshots = SOFTWARE_SCREENSHOTS.map((path) => `${siteUrl}${path}`);
 
   return {
     '@context': 'https://schema.org',
@@ -40,6 +47,7 @@ export function buildHomepageStructuredData(siteMetadata) {
         url: `${siteUrl}/`,
         description: siteMetadata.defaultDescription,
         image: siteMetadata.defaultImage,
+        screenshot: screenshots,
         operatingSystem: 'iOS',
         applicationCategory: 'MultimediaApplication',
         publisher: {
@@ -48,6 +56,7 @@ export function buildHomepageStructuredData(siteMetadata) {
         offers: {
           '@type': 'Offer',
           url: `${siteUrl}/#pricing`,
+          price: '19.99',
           availability: 'https://schema.org/InStock',
         },
         featureList: SOFTWARE_FEATURES,
