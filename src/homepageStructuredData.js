@@ -9,9 +9,9 @@ const SOFTWARE_FEATURES = [
 ];
 
 const SOFTWARE_SCREENSHOTS = [
-  '/assets/screen-1.png',
-  '/assets/screen-2.png',
-  '/assets/screen-3.png',
+  '/assets/screen-1.jpg',
+  '/assets/screen-2.jpg',
+  '/assets/screen-3.jpg',
 ];
 
 function escapeJsonForHtml(value) {
