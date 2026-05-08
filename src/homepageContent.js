@@ -58,6 +58,6 @@ export const faqItems = [
   {
     question: 'Does it work with hardware synths directly, no Mac in the middle?',
     answer:
-      'Yes. Connect over Bluetooth LE MIDI directly to any BLE MIDI-capable synth or groovebox. USB works too via a Lightning or USB-C adapter to a class-compliant host. No computer required.',
+      'Yes. You can connect directly to compatible hardware using Bluetooth MIDI or USB MIDI. For USB, the device must support class-compliant USB MIDI. DIN MIDI hardware also works through a compatible USB MIDI interface. No computer required.',
   },
 ];

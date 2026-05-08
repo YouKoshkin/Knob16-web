@@ -513,7 +513,6 @@ function App({ initialSectionId }) {
               <span>Serato DJ</span>
               <span>Rekordbox</span>
             </div>
-            <p className="hero-copy">If it speaks MIDI, it works</p>
           </div>
         </section>
         */}
@@ -561,7 +560,7 @@ function App({ initialSectionId }) {
               { title: 'MPE', desc: 'Up to 5 simultaneous touches<br/>Pitch Bend · Pressure · CC74' },
               { title: 'Connectivity', desc: 'USB · Bluetooth MIDI · Network MIDI (Wi-Fi)' },
               { title: 'Platforms', desc: 'iPhone · iPad · iOS 18.6+' },
-              { title: 'Compatibility', desc: 'If it speaks MIDI, it works' },
+              { title: 'Compatibility', desc: 'Class-compliant USB MIDI · Bluetooth MIDI · Network MIDI · Virtual MIDI' },
             ].map((item) => (
               <div className="spec-card" key={item.title}>
                 <h3>{item.title}</h3>
